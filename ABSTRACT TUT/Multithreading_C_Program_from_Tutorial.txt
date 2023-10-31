@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <pthread.h>
+#include <stdio.h>
+unsigned long sum[4]; /* this data is shared by the thread(s) */
+void *sum_thread(void *param); /* the thread */
+int main(int argc, char *argv[]) {
+    pthread_t workers[4];
+    pthread_attr_t attr;
+    /* get the default attributes */
+    pthread_attr_init(&attr);
+    /* create the thread */
+    int i;
+    for(i=0; i<4; i++)
+        pthread_create(&workers[i], &attr, sum_thread,(void *) i);
+    /* now wait for the thread to exit */
+    for(i=0; i<4; i++)
+        pthread_join(workers[i],NULL);
+    printf("sum = %lu\n",sum[0]+sum[1]+sum[2]+sum[3]);
+}
+/**
+* The thread will begin control in this function
+*/
+void *sum_thread(void *param)
+{
+    long id = (long) param;
+    int start = id*25000000 + 1;
+    int i=0;
+    while (i<25000000) {
+        sum[id] += (i+start);
+        i++;
+    }
+    printf("Local Sum = %lu , %lu\n", id , sum[id]);
+    pthread_exit(0);
+}
