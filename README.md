@@ -7,3 +7,4 @@
 # From 1- 17: https://youtube.com/playlist?list=PLSrgC_BTeDInJyR2E6H11wMdhY1xcIIV7&si=eseJsLJe8OOAoeOQ
 # Prof. Saleh Oqeili Lectures : https://youtube.com/playlist?list=PLSrgC_BTeDInrzwQ9fdIhRymgEXJ2oJ0C&si=bk-Kaz1ONjUlkM1h
 # OS | Chapter 6 | Synchronization Tools : https://youtube.com/playlist?list=PLfay0LLBd0wgvB2AjuB-cmdQm79JQ_W_o&si=agfwBDN5sSxm9cVw
+# hsoub : https://academy.hsoub.com/files/24-%D8%A3%D9%86%D8%B8%D9%85%D8%A9-%D8%A7%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84-%D9%84%D9%84%D9%85%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D9%86/
